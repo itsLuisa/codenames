@@ -80,7 +80,7 @@
       "team": "red",
       "remaining words": ["minute", "road", "suit", "table", "lead", "brush", "paint", "computer", "bar", "pass", "blues", "whale"],
       "clue": ["mammal", 1],
-      "referenced words": ["mammal"],
+      "referenced words": ["whale"],
       "guesses": ["whale"]
     },
     "round 7": {
