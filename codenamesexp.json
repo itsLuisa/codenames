@@ -1,0 +1,167 @@
+{
+  "game 1": {
+    "color distribution": {"alaska": "color", "cast": "blue", "tap": "red", "leaf": "red", "bermuda": "red", "dentist": "blue", "manicure": "blue", "stick": "blue", "spider": "red", "wool": "blue", "ram": "red", "racket": "white", "iron": "white", "rope": "red", "comic": "blue", "bugle": "white", "ranch": "black", "block": "blue", "dress": "white", "stadium": "red", "plate": "white", "vampire": "white", "poison": "blue", "van": "blue", "bill": "red"},
+    "round 1": {
+      "team": "blue",
+      "remaining words": ["alaska", "cast", "tap", "leaf", "bermuda", "dentist", "manicure", "stick", "spider", "wool", "ram", "racket", "iron", "rope", "comic", "bugle", "ranch", "block", "dress", "stadium", "plate", "vampire", "poison", "van", "bill"],
+      "clue": ["cosmetic", 2],
+      "referenced words": ["manicure", "stick"],
+      "guesses": ["manicure", "stick"]
+    },
+    "round 2": {
+      "team": "red",
+      "remaining words": ["alaska", "cast", "tap", "leaf", "bermuda", "dentist", "spider", "wool", "ram", "racket", "iron", "rope", "comic", "bugle", "ranch", "block", "dress", "stadium", "plate", "vampire", "poison", "van", "bill" ],
+      "clue": ["sport", 2],
+      "referenced words": ["stadium", "rope"],
+      "guesses": ["stadium", "racket"]
+    },
+    "round 3": {
+      "team": "blue",
+      "remaining words": ["alaska", "cast", "tap", "leaf", "bermuda", "dentist", "spider", "wool", "ram", "iron", "rope", "comic", "bugle", "ranch", "block", "dress", "plate", "vampire", "poison", "van", "bill" ],
+      "clue": ["anesthesia", 2],
+      "referenced words": ["dentist", "cast"],
+      "guesses": ["dentist", "cast"]
+    },
+    "round 4": {
+      "team": "red",
+      "remaining words": ["alaska", "tap", "leaf", "bermuda", "spider", "wool", "ram", "iron", "rope", "comic", "bugle", "ranch", "block", "dress", "plate", "vampire", "poison", "van", "bill" ],
+      "clue": ["nature", 2],
+      "referenced words": ["leaf", "spider"],
+      "guesses": ["leaf", "spider"]
+    },
+    "round 5": {
+      "team": "blue",
+      "remaining words": ["alaska", "tap", "bermuda", "wool", "ram", "iron", "rope", "comic", "bugle", "ranch", "block", "dress", "plate", "vampire", "poison", "van", "bill" ],
+      "clue": ["housing", 2],
+      "referenced words": ["block", "van"],
+      "guesses": ["block", "ranch"]
+    }
+  },
+  "game 2": {
+    "color distribution": {"yard": "blue", "pew": "blue", "earth": "white", "marathon": "red", "row": "red", "wave": "white", "casino": "blue", "chip": "blue", "court": "blue", "mexico": "red", "toast": "red", "heart": "red", "australia": "blue", "whale": "red", "minute": "blue", "table": "red", "blues": "blue", "road": "red", "brush": "blue", "bar": "black", "suit": "white", "lead": "white", "paint": "white", "computer": "white", "pass": "white"},
+    "round 1": {
+      "team": "blue",
+      "remaining words": ["minute", "road", "earth", "pew", "suit", "australia", "table", "marathon", "wave", "lead", "heart", "brush", "paint", "yard", "row", "mexico", "casino", "computer", "court", "chip", "bar", "pass", "toast", "blues", "whale"],
+      "clue": ["garden", 3],
+      "referenced words": ["yard", "pew", "court"],
+      "guesses": ["yard", "pew", "earth"]
+    },
+    "round 2": {
+      "team": "red",
+      "remaining words": ["minute", "road", "suit", "australia", "table", "marathon", "wave", "lead", "heart", "brush", "paint", "row", "mexico", "casino", "computer", "court", "chip", "bar", "pass", "toast", "blues", "whale"],
+      "clue": ["endurance", 3],
+      "referenced words": ["marathon", "row", "heart"],
+      "guesses": ["marathon", "row", "wave"]
+    },
+    "round 3": {
+      "team": "blue",
+      "remaining words": ["minute", "road", "suit", "australia", "table", "lead", "heart", "brush", "paint", "mexico", "casino", "computer", "court", "chip", "bar", "pass", "toast", "blues", "whale"],
+      "clue": ["gambling", 2],
+      "referenced words": ["casino", "chip"],
+      "previous guess": ["court"],
+      "guesses": ["casino", "chip"]
+    },
+    "round 4": {
+      "team": "red",
+      "remaining words": ["minute", "road", "suit", "australia", "table", "lead", "heart", "brush", "paint", "mexico", "computer", "bar", "pass", "toast", "blues", "whale"],
+      "clue": ["capirotada", 2],
+      "referenced words": ["mexico", "toast"],
+      "previous guesses": ["heart"],
+      "guesses": ["mexico", "toast"]
+    },
+    "round 5": {
+      "team": "blue",
+      "remaining words": ["minute", "road", "suit", "australia", "table", "lead", "brush", "paint", "computer", "bar", "pass", "blues", "whale"],
+      "clue": ["kangaroo", 1],
+      "referenced words": ["australia"],
+      "guesses": ["australia"]
+    },
+    "round 6": {
+      "team": "red",
+      "remaining words": ["minute", "road", "suit", "table", "lead", "brush", "paint", "computer", "bar", "pass", "blues", "whale"],
+      "clue": ["mammal", 1],
+      "referenced words": ["mammal"],
+      "guesses": ["whale"]
+    },
+    "round 7": {
+      "team": "blue",
+      "remaining words": ["minute", "road", "suit", "table", "lead", "brush", "paint", "computer", "bar", "pass", "blues"],
+      "clue": ["hour", 1],
+      "referenced words": ["minute"],
+      "guesses": ["minute"]
+    },
+    "round 8": {
+      "team": "red",
+      "remaining words": ["road", "suit", "table", "lead", "brush", "paint", "computer", "bar", "pass", "blues"],
+      "clue": ["tennis", 1],
+      "referenced words": ["table"],
+      "guesses": ["table"]
+    },
+    "round 9": {
+      "team": "blue",
+      "remaining words": ["road", "suit", "lead", "brush", "paint", "computer", "bar", "pass", "blues"],
+      "clue": ["weeping willow", 2],
+      "referenced words": ["blues", "brush"],
+      "guesses": ["blues", "road"]
+    }
+  },
+  "game 3": {
+    "color distribution": {"battleship": "blue", "crusader": "blue", "sherlock": "red", "tuxedo": "red", "scroll": "blue", "game": "blue", "kid": "blue", "kangaroo": "red", "polo": "blue", "square": "blue", "well": "red", "ice": "red", "ear": "blue", "waitress": "red", "ambulance": "black", "mark": "blue", "flute": "red", "saw": "red", "page": "white", "crow": "white", "ray": "white", "rabbit": "white", "buffalo": "white", "banana": "white", "coach": "white"},
+    "round 1": {
+      "team": "blue",
+      "remaining words": ["ambulance", "page", "crusader", "mark", "sherlock", "crow", "well", "battleship", "ray", "square", "rabbit", "flute", "tuxedo", "kid", "scroll", "waitress", "kangaroo", "saw", "buffalo", "banana", "polo", "coach", "ice", "game", "ear"],
+      "clue": ["war", 2],
+      "referenced words": ["battleship", "crusader"],
+      "guesses": ["battleship", "crusader"]
+    },
+    "round 2": {
+      "team": "red",
+      "remaining words": ["ambulance", "page", "mark", "sherlock", "crow", "well", "ray", "square", "rabbit", "flute", "tuxedo", "kid", "scroll", "waitress", "kangaroo", "saw", "buffalo", "banana", "polo", "coach", "ice", "game", "ear"],
+      "clue": ["detective party", 2],
+      "referenced words": ["sherlock", "tuxedo"],
+      "guesses": ["sherlock", "tuxedo"]
+    },
+    "round 3": {
+      "team": "blue",
+      "remaining words": ["ambulance", "page", "mark", "crow", "well", "ray", "square", "rabbit", "flute", "kid", "scroll", "waitress", "kangaroo", "saw", "buffalo", "banana", "polo", "coach", "ice", "game", "ear"],
+      "clue": ["ipad", 3],
+      "referenced words": ["scroll", "game", "kid"],
+      "guesses": ["scroll", "game", "kid"]
+    },
+    "round 4": {
+      "team": "red",
+      "remaining words": ["ambulance", "page", "mark", "crow", "well", "ray", "square", "rabbit", "flute", "waitress", "kangaroo", "saw", "buffalo", "banana", "polo", "coach", "ice", "ear"],
+      "clue": ["australia", 1],
+      "referenced words": ["kangaroo"],
+      "guesses": ["kangaroo"]
+    },
+    "round 5": {
+      "team": "blue",
+      "remaining words": ["ambulance", "page", "mark", "crow", "well", "ray", "square", "rabbit", "flute", "waitress", "saw", "buffalo", "banana", "polo", "coach", "ice", "ear"],
+      "clue": ["playground", 2],
+      "referenced words": ["polo", "square"],
+      "guesses": ["polo", "square"]
+    },
+    "round 6": {
+      "team": "red",
+      "remaining words": ["ambulance", "page", "mark", "crow", "well", "ray", "rabbit", "flute", "waitress", "saw", "buffalo", "banana", "coach", "ice", "ear"],
+      "clue": ["water", 2],
+      "referenced words": ["well", "ice"],
+      "guesses": ["well", "ice"]
+    },
+    "round 7": {
+      "team": "blue",
+      "remaining words": ["ambulance", "page", "mark", "crow", "ray", "rabbit", "flute", "waitress", "saw", "buffalo", "banana", "coach", "ear"],
+      "clue": ["body part", 1],
+      "referenced words": ["ear"],
+      "guesses": ["ear"]
+    },
+    "round 8": {
+      "team": "red",
+      "remaining words": ["ambulance", "page", "mark", "crow", "ray", "rabbit", "flute", "waitress", "saw", "buffalo", "banana", "coach"],
+      "clue": ["party", 2],
+      "referenced words": ["waitress", "flute"],
+      "guesses": ["waitress", "ambulance"]
+    }
+  }
+}
