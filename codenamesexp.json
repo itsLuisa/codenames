@@ -1,6 +1,6 @@
 {
   "game 1": {
-    "color distribution": {"alaska": "color", "cast": "blue", "tap": "red", "leaf": "red", "bermuda": "red", "dentist": "blue", "manicure": "blue", "stick": "blue", "spider": "red", "wool": "blue", "ram": "red", "racket": "white", "iron": "white", "rope": "red", "comic": "blue", "bugle": "white", "ranch": "black", "block": "blue", "dress": "white", "stadium": "red", "plate": "white", "vampire": "white", "poison": "blue", "van": "blue", "bill": "red"},
+    "color distribution": {"alaska": "white", "cast": "blue", "tap": "red", "leaf": "red", "bermuda": "red", "dentist": "blue", "manicure": "blue", "stick": "blue", "spider": "red", "wool": "blue", "ram": "red", "racket": "white", "iron": "white", "rope": "red", "comic": "blue", "bugle": "white", "ranch": "black", "block": "blue", "dress": "white", "stadium": "red", "plate": "white", "vampire": "white", "poison": "blue", "van": "blue", "bill": "red"},
     "round 1": {
       "team": "blue",
       "remaining words": ["alaska", "cast", "tap", "leaf", "bermuda", "dentist", "manicure", "stick", "spider", "wool", "ram", "racket", "iron", "rope", "comic", "bugle", "ranch", "block", "dress", "stadium", "plate", "vampire", "poison", "van", "bill"],
