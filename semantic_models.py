@@ -1,6 +1,6 @@
 import numpy as np
 from scipy import spatial
-import gensim.downloader as api
+#import gensim.downloader as api
 
 
 class GloVe_Model:
@@ -25,7 +25,7 @@ class GloVe_Model:
             d[word] = self.distance(clue, word)
         return sorted(d.items(), key=lambda x: x[1])
 
-
+'''
 class Word2Vec_Model:
     def __init__(self):
         self.model = api.load('word2vec-google-news-300')
@@ -38,12 +38,13 @@ class Word2Vec_Model:
         for word in wordlist:
             d[word] = self.similarity(clue, word)
         return sorted(d.items(), key=lambda x: x[1], reverse=True)
+'''
 
 def main():
     glove = GloVe_Model()
     print(glove.distance("house", "stone"))
-    word2vec = Word2Vec_Model()
-    print(word2vec.similarity("house", "stone"))
+    #word2vec = Word2Vec_Model()
+    #print(word2vec.similarity("house", "stone"))
 
 if __name__ == "__main__":
     main()

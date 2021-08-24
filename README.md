@@ -9,9 +9,11 @@
 ## How to run baseline
 * Download the GloVe dataset here: http://nlp.stanford.edu/data/glove.42B.300d.zip
 * Unzip and put it in the codenames directory
+* For faster performance, only use top 50 000 words from GloVe dataset (it's important that the finished file is named *glove_short.txt*)
+```
+head -n 50000 glove.42B.300d.txt > glove_short.txt
+```
 * Get file with 10,000 most common English words here: https://github.com/first20hours/google-10000-english/blob/master/google-10000-english.txt and put it in the codenames directory
 * Install python packages:
     - numpy
-    - scipy
-    - gensim
 * run *baseline_model.py*
