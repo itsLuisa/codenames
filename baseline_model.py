@@ -1,4 +1,4 @@
-from semantic_models import GloVe_Model, Word2Vec_Model
+from semantic_models import GloVe_Model #, Word2Vec_Model
 from collections import defaultdict
 from itertools import combinations
 
@@ -36,12 +36,23 @@ def produce_clue(red_words, bad_words, words, model):
                     for r_w in rc:
                         if R[r_w][w] > dr:
                             dr = R[r_w][w]
-                    if dr < d and dr < wd and dr < 0.6: # threshold [0;1] to determine the models aggressiveness (the higher the more aggressive)
-                        print(rc, w, i, dr)
+                    if dr < d and dr < wd and dr < 1: # threshold [0;1] to determine the models aggressiveness (the higher the more aggressive)
+                        #print(rc, w, i, dr)
                         d = dr
                         best = w
                         Ci = i
     return best, Ci
+
+def google_words(model):
+    # words that the model can choose the clue from (10,000 most common english words)
+    w = list()
+    with open("google-10000-english.txt", encoding="utf-8") as f:
+        for line in f:
+            line = line.split()
+            word = line[0]
+            if word in model.embeddings:
+                w.append(word)
+    return w
 
 def main():
     model = GloVe_Model()
@@ -51,19 +62,11 @@ def main():
     #bad_words = ["earth", "marathon", "row", "wave", "mexico", "toast", "heart", "whale", "table", "road", "bar", "suit", "lead", "paint", "computer", "pass"]
 
     board = red_words + bad_words
-    # words that the model can choose the clue from (10,000 most common english words)
-    words = list()
-    with open("google-10000-english.txt", encoding="utf-8") as f:
-        for line in f:
-            line = line.split()
-            word = line[0]
-            if word in model.embeddings:
-                words.append(word)
 
     # simulating one round of the game
 
     # producing cue
-    clue = produce_clue(red_words, bad_words, words, model)
+    clue = produce_clue(red_words, bad_words, google_words(model), model)
     print("--- GloVe gives the following clue:", clue, "---")
 
     # guessing based on clue
