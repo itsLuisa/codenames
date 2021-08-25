@@ -32,11 +32,11 @@ sorted_combos = sorted(combos.items(), key=lambda x: x[1])
 shorted_combos = list()
 for (w,d) in sorted_combos:
     shorted_combos.append((w,d))
-    if "battleship" in w and "crusader" in w:
+    if "battleship" in w and "crusader" in w: # here I have to find a more general threshold that makes sense
         break
 print(shorted_combos, len(shorted_combos))
 
-# find alternative clues
+# find alternative clues in the traditional Kim et al way
 alternative_clues = list()
 for c in shorted_combos:
     target_words = list(c[0])
@@ -46,6 +46,13 @@ for c in shorted_combos:
     new_clue = produce_clue(target_words, bad_words, google_words(model), model)
     print(new_clue)
     alternative_clues.append(new_clue)
+
+# find alternative clues in a (hopefully) faster, vectorbased way
+'''for c in shorted_combos:
+    target_words = list(c[0])
+    print(target_words)
+    new_clue = model.closest_words()
+'''
 
 # assemble clue combos
 clues = [tuple(clue)] + alternative_clues
