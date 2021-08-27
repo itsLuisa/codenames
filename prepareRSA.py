@@ -29,10 +29,9 @@ def get_word_combos(model, clue, remaining_words):
     return sorted_combos
 
 
-def find_alternative_clues(model, short_combos, remaining_words):
+def find_alternative_clues(google_words_list, model, short_combos, remaining_words):
     """assembles alternative clues in the traditional Kim et al way"""
     alternative_clues = list()
-    google_words_list = google_words(model)
     for c in short_combos:
         target_words = list(c[0])
         print("target words:", target_words)
@@ -62,7 +61,8 @@ def main():
     short_combos = sorted_combos[:10]
     print(len(short_combos), short_combos)
 
-    alternative_clues = find_alternative_clues(model, short_combos, remaining_words)
+    google_words_list = google_words(model)
+    alternative_clues = find_alternative_clues(google_words_list, model, short_combos, remaining_words)
     print(alternative_clues)
 
     # assemble clue combos
