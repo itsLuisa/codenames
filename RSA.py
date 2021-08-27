@@ -19,7 +19,7 @@ def create_meaning_matrix(all_clues, just_combos, model):
     return meaning_matrix
 
 
-def RSA(meaning_matrix, just_combos, all_clues):
+def RSA(meaning_matrix, just_combos):
     """takes meaning matrix and computes pragmatic listener matrix"""
     literal_listener = normalize(meaning_matrix, norm='l1', axis=1)
     print("literal listener:\n", literal_listener)
@@ -32,7 +32,4 @@ def RSA(meaning_matrix, just_combos, all_clues):
 
     # finding the best guess
     best_prag_guess = just_combos[list(pragmatic_listener[0]).index(min(pragmatic_listener[0]))]
-    print("original clue:", all_clues[0])
-    print("best literal guess:", just_combos[0])
-    print("best pragmatic guess:", best_prag_guess)
     return best_prag_guess

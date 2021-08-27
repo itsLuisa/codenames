@@ -11,9 +11,9 @@ def extract_example():
     with open("codenamesexp.json", encoding="utf-8") as f:
         data = json.load(f)
         #clue = data["game 3"]["round 1"]["clue"]
-        clue = data["game 1"]["round 1"]["clue"]
-        gold_guesses = data["game 1"]["round 1"]["guesses"]
-        remaining_words = data["game 1"]["round 1"]["remaining words"]
+        clue = data["game 1"]["round 2"]["clue"]
+        gold_guesses = data["game 1"]["round 2"]["guesses"]
+        remaining_words = data["game 1"]["round 2"]["remaining words"]
     return clue, gold_guesses, remaining_words
 
 
@@ -53,18 +53,12 @@ def find_alt_clues_vector():
         print(target_words)
         new_clue = model.closest_words()
 
-
-def main():
-    clue, gold_guesses, remaining_words = extract_example()
-
-    model = GloVe_Model()
-    alt_clues = dict()
-
+def rsa_based_guess(clue, gold_guesses, remaining_words, alt_clues, model):
     sorted_combos = get_word_combos(model, clue, remaining_words)
     print(len(sorted_combos), sorted_combos)
 
     # shorten the combo list
-    short_combos = sorted_combos[:10]
+    short_combos = sorted_combos[:200]
     print(len(short_combos), short_combos)
 
     google_words_list = google_words(model)
@@ -79,9 +73,23 @@ def main():
     print(just_combos)
 
     meaning_matrix = create_meaning_matrix(all_clues, just_combos, model)
-    RSA(meaning_matrix, just_combos, all_clues)
+    best_prag_guess = RSA(meaning_matrix, just_combos)
+    print("original clue:", all_clues[0])
+    print("best literal guess:", just_combos[0])
+    print("best pragmatic guess:", best_prag_guess)
     print("human guess:", gold_guesses)
-    
+    original_clue = all_clues[0]
+    best_lit_guess = just_combos[0]
+    human_guess = gold_guesses
+    return original_clue, best_lit_guess, best_prag_guess, human_guess
 
-if __name__=="__main__":
+
+def main():
+    clue, gold_guesses, remaining_words = extract_example()
+    alt_clues = dict()
+    model = GloVe_Model()
+    rsa_based_guess(clue, gold_guesses, remaining_words, alt_clues, model)
+
+
+if __name__ == "__main__":
     main()
