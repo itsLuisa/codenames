@@ -29,14 +29,18 @@ def get_word_combos(model, clue, remaining_words):
     return sorted_combos
 
 
-def find_alternative_clues(google_words_list, model, short_combos, remaining_words):
+def find_alternative_clues(google_words_list, model, short_combos, remaining_words, alt_clues):
     """assembles alternative clues in the traditional Kim et al way"""
     alternative_clues = list()
     for c in short_combos:
         target_words = list(c[0])
         print("target words:", target_words)
-        bad_words = [i for i in remaining_words if i not in target_words]
-        new_clue = produce_clue(target_words, bad_words, google_words_list, model)
+        if frozenset(target_words) in alt_clues:
+            new_clue = alt_clues[frozenset(target_words)]
+        else:
+            bad_words = [i for i in remaining_words if i not in target_words]
+            new_clue = produce_clue(target_words, bad_words, google_words_list, model)
+            alt_clues[frozenset(target_words)] = new_clue
         print("alternative clue:", new_clue)
         alternative_clues.append(new_clue)
     return alternative_clues
@@ -54,6 +58,8 @@ def main():
     clue, gold_guesses, remaining_words = extract_example()
 
     model = GloVe_Model()
+    alt_clues = dict()
+
     sorted_combos = get_word_combos(model, clue, remaining_words)
     print(len(sorted_combos), sorted_combos)
 
@@ -62,7 +68,7 @@ def main():
     print(len(short_combos), short_combos)
 
     google_words_list = google_words(model)
-    alternative_clues = find_alternative_clues(google_words_list, model, short_combos, remaining_words)
+    alternative_clues = find_alternative_clues(google_words_list, model, short_combos, remaining_words, alt_clues)
     print(alternative_clues)
 
     # assemble clue combos
@@ -74,6 +80,8 @@ def main():
 
     meaning_matrix = create_meaning_matrix(all_clues, just_combos, model)
     RSA(meaning_matrix, just_combos, all_clues)
+    print("human guess:", gold_guesses)
+    
 
 if __name__=="__main__":
     main()
