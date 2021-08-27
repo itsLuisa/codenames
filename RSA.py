@@ -1,47 +1,38 @@
 from sklearn.preprocessing import normalize
 import numpy as np
-from semantic_models import GloVe_Model
 from statistics import mean
-from prepareRSA import clues, short_combos, model
 
-#model = GloVe_Model()
-#clues = [('war', 2), ('play', 2), ('thought', 2), ('warrior', 2)]
-#short_combos = [(('well', 'game'), 0.52), (('well', 'saw'), 0.55), (('battleship', 'crusader'), 0.66)]
 
-# create meaning matrix with
-# rows = clues
-# columns = combos
-sc_nonum = [a for a, b in short_combos]
-print(sc_nonum)
+def create_meaning_matrix(all_clues, just_combos, model):
+    """creates meaning matrix with: rows = clues & columns = guess combos"""
+    meaning_matrix = list()
+    for (c, i) in all_clues:
+        arr = list()
+        for jc in just_combos:
+            m = mean([model.distance(w,c) for w in jc])
+            arr.append(m)
+        arr = np.array(arr)
+        print(c, arr)
+        meaning_matrix.append(arr)
+    meaning_matrix = np.array(meaning_matrix)
+    print("meaning matrix:\n", meaning_matrix)
+    return meaning_matrix
 
-meaning_matrix = list()
-for (c, i) in clues:
-    arr = list()
-    for (sc, n) in short_combos:
-        m = mean([model.distance(w,c) for w in sc])
-        arr.append(m)
-    arr = np.array(arr)
-    print(c, arr)
-    meaning_matrix.append(arr)
 
-meaning_matrix = np.array(meaning_matrix)
-print("meaning matrix:\n", meaning_matrix)
+def RSA(meaning_matrix, just_combos, all_clues):
+    """takes meaning matrix and computes pragmatic listener matrix"""
+    literal_listener = normalize(meaning_matrix, norm='l1', axis=1)
+    print("literal listener:\n", literal_listener)
 
-"""axis = 0 indicates, normalize by column and if you are 
-interested in row normalization just give axis = 1"""
+    pragmatic_speaker = normalize(literal_listener, norm='l1', axis=0)
+    print("pragmatic speaker:\n", pragmatic_speaker)
 
-# RSA
-literal_listener = normalize(meaning_matrix, norm='l1', axis=1)
-print("literal listener:\n", literal_listener)
+    pragmatic_listener = normalize(pragmatic_speaker, norm='l1', axis=1)
+    print("pragmatic listener:\n", pragmatic_listener)
 
-pragmatic_speaker = normalize(literal_listener, norm='l1', axis=0)
-print("pragmatic speaker:\n", pragmatic_speaker)
-
-pragmatic_listener = normalize(pragmatic_speaker, norm='l1', axis=1)
-print("pragmatic listener:\n", pragmatic_listener)
-
-# finding the best guess
-best_prag_guess = sc_nonum[list(pragmatic_listener[0]).index(min(pragmatic_listener[0]))]
-print("original clue:", clues[0])
-print("best literal guess:", sc_nonum[0])
-print("best pragmatic guess:", best_prag_guess)
+    # finding the best guess
+    best_prag_guess = just_combos[list(pragmatic_listener[0]).index(min(pragmatic_listener[0]))]
+    print("original clue:", all_clues[0])
+    print("best literal guess:", just_combos[0])
+    print("best pragmatic guess:", best_prag_guess)
+    return best_prag_guess
