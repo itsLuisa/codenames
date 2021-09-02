@@ -1,6 +1,8 @@
 from semantic_models import GloVe_Model #, Word2Vec_Model
 from collections import defaultdict
 from itertools import combinations
+import json
+from statistics import mean
 
 def make_guess(clue, board, model):
     best = ""
@@ -75,6 +77,46 @@ def main():
         guess = make_guess(clue[0], board, model)
         print(guess)
         board.remove(guess)
+
+    # ranking guesses in annotated data
+    with open("codenamesexp.json", encoding="utf-8") as f:
+        data = json.load(f)
+
+    with open("baseline_ranking.tsv", "w", encoding="utf-8") as g:
+        first_line = "clue\thuman guess\tmodel guess\taverage rank of correct guesses\tmodel score\n"
+        g.writelines(first_line)
+
+    for game in data:
+        for round in data[game]:
+            rank = list()
+            if round != "color distribution":
+                remaining_words = data[game][round]["remaining words"]
+                clue = data[game][round]["clue"]
+                gold_guesses = data[game][round]["guesses"]
+                if clue[0] not in model.embeddings:
+                    continue
+
+                while remaining_words:
+                    model_guess = make_guess(clue[0], remaining_words, model)
+                    rank.append(model_guess)
+                    remaining_words.remove(model_guess)
+
+                # compute average rank
+                avg_rank = mean([rank.index(guess) for guess in gold_guesses])
+
+                # compute score
+                flag = True
+                i = -1
+                while flag:
+                    i += 1
+                    flag = rank[i] in gold_guesses
+                score = i
+
+                # write down
+                with open("baseline_ranking.tsv", "a", encoding="utf-8") as g:
+                    line = str(clue) + "\t" + str(gold_guesses) + "\t" + str(rank) + "\t" + str(avg_rank) + "\t" + str(score) + "\n"
+                    g.writelines(line)
+
 
 if __name__ == "__main__":
     main()
