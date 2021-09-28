@@ -12,6 +12,7 @@ def extract_example():
         data = json.load(f)
         #clue = data["game 3"]["round 1"]["clue"]
         clue = data["game 1"]["round 2"]["clue"]
+        #clue = ["water", 3]
         gold_guesses = data["game 1"]["round 2"]["guesses"]
         remaining_words = data["game 1"]["round 2"]["remaining words"]
     return clue, gold_guesses, remaining_words
@@ -20,6 +21,7 @@ def extract_example():
 def get_word_combos(model, clue, remaining_words):
     """extracts word combinations and mean distance to clue and sort these combinations in descending order"""
     rank = model.get_hierarchy(clue[0], remaining_words)
+    rank = rank[:11]
     combos = dict()
     for c in combinations(rank, clue[1]):
         words = tuple(i[0] for i in c)
@@ -46,14 +48,25 @@ def find_alternative_clues(google_words_list, model, short_combos, remaining_wor
     return alternative_clues
 
 
-def find_alt_clues_vector():
-    """find alternative clues in a (hopefully) faster, vectorbased way"""
-    for c in shorted_combos:
+def find_alt_clues_vector(model, short_combos, remaining_words, alt_clues):
+    """find alternative clues in a, vector-based way insp. by Somers"""
+    alternative_clues = list()
+    for c in short_combos:
         target_words = list(c[0])
-        print(target_words)
-        new_clue = model.closest_words()
+        print("target words:", target_words)
+        if frozenset(target_words) in alt_clues:
+            new_clue = alt_clues[frozenset(target_words)]
+        else:
+            bad_words = [i for i in remaining_words if i not in target_words]
+            new_clue = model.candidates(target_words, bad_words)[0][0]
+            new_clue = tuple((new_clue, len(target_words)))
+            alt_clues[frozenset(target_words)] = new_clue
+        print("alternative clue:", new_clue)
+        alternative_clues.append(new_clue)
+    return alternative_clues
 
-def rsa_based_guess(clue, gold_guesses, remaining_words, alt_clues, model):
+
+def rsa_based_guess(clue, gold_guesses, remaining_words, alt_clues, model, mode=1):
     sorted_combos = get_word_combos(model, clue, remaining_words)
     print(len(sorted_combos), sorted_combos)
 
@@ -61,8 +74,14 @@ def rsa_based_guess(clue, gold_guesses, remaining_words, alt_clues, model):
     short_combos = sorted_combos[:200]
     print(len(short_combos), short_combos)
 
-    google_words_list = google_words(model)
-    alternative_clues = find_alternative_clues(google_words_list, model, short_combos, remaining_words, alt_clues)
+    if mode == 1:
+        print("kim et al")
+        google_words_list = google_words(model)
+        alternative_clues = find_alternative_clues(google_words_list, model, short_combos, remaining_words, alt_clues)
+
+    else:
+        print("somers")
+        alternative_clues = find_alt_clues_vector(model, short_combos, remaining_words, alt_clues)
     print(alternative_clues)
 
     # assemble clue combos
