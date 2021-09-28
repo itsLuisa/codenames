@@ -79,21 +79,29 @@ def main():
         board.remove(guess)
 
     # ranking guesses in annotated data
-    with open("codenamesexp.json", encoding="utf-8") as f:
+    with open("data_MCDM.json", encoding="utf-8") as f:
         data = json.load(f)
 
-    with open("baseline_ranking.tsv", "w", encoding="utf-8") as g:
+    with open("baseline_ranking_data3.tsv", "w", encoding="utf-8") as g:
         first_line = "clue\thuman guess\tmodel guess\taverage rank of correct guesses\tmodel score\n"
         g.writelines(first_line)
 
     for game in data:
         for round in data[game]:
             rank = list()
+            unknown_word = False
             if round != "color distribution":
                 remaining_words = data[game][round]["remaining words"]
+                for word in remaining_words:
+                    if word not in model.embeddings:
+                        unknown_word = True
+                if unknown_word:
+                    continue
                 clue = data[game][round]["clue"]
                 gold_guesses = data[game][round]["guesses"]
                 if clue[0] not in model.embeddings:
+                    continue
+                if clue[1] == "inf":
                     continue
 
                 while remaining_words:
@@ -113,7 +121,7 @@ def main():
                 score = i
 
                 # write down
-                with open("baseline_ranking.tsv", "a", encoding="utf-8") as g:
+                with open("baseline_ranking_data3.tsv", "a", encoding="utf-8") as g:
                     line = str(clue) + "\t" + str(gold_guesses) + "\t" + str(rank) + "\t" + str(avg_rank) + "\t" + str(score) + "\n"
                     g.writelines(line)
 
