@@ -17,3 +17,8 @@ head -n 50000 glove.42B.300d.txt > glove_short.txt
 * Install python packages:
     - numpy
 * run *baseline_model.py*
+
+## Data
+* *codenamesexp.json:* collected at ZiS games night 04/28/2021
+* *data_Polygon.json:* collected from https://www.youtube.com/watch?v=9WipnEbVWOY&list=LL&index=8&t=2303s
+* *data_MCDM.json:* collected from https://www.youtube.com/watch?v=7pvYL60aQZ8&list=LL&index=4 and https://www.youtube.com/watch?v=7SB7HAL7-ZU&list=LL&index=3
