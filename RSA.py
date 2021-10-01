@@ -9,7 +9,7 @@ def create_meaning_matrix(all_clues, just_combos, model):
     for (c, i) in all_clues:
         arr = list()
         for jc in just_combos:
-            m = mean([model.distance(w,c) for w in jc])
+            m = mean([model.distance(w, c) for w in jc])
             arr.append(m)
         arr = np.array(arr)
         print(c, arr)
