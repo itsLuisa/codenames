@@ -1,10 +1,18 @@
-from semantic_models import GloVe_Model #, Word2Vec_Model
+from semantic_models import GloVe_Model
 from collections import defaultdict
 from itertools import combinations
 import json
 from statistics import mean
 
+
 def make_guess(clue, board, model):
+    """
+    find the best fitting board word given the clue
+    :param clue: string of current clue word
+    :param board: list of current board words
+    :param model: instance of the GloVe class
+    :return: string of best match on the board given the clue
+    """
     best = ""
     d = float("inf")
     for word in board:
@@ -13,7 +21,16 @@ def make_guess(clue, board, model):
             best = word
     return best
 
+
 def produce_clue(red_words, bad_words, words, model):
+    """
+    finds the best possible clue for the current game state from a set of possible clues
+    :param red_words: list of words that the clue can refer to
+    :param bad_words: list of words that the clue shouldn't refer to
+    :param words: list of possible clues
+    :param model: instance of GloVe class
+    :return: tuple of clue word and number
+    """
     R = defaultdict(dict)
     for r_w in red_words:
         for w in words:
@@ -24,7 +41,6 @@ def produce_clue(red_words, bad_words, words, model):
             B[b_w][w] = model.distance(b_w, w)
     Ci = 0
     best = ""
-    #d = float("inf")
     for i in range(1, len(red_words)+1):
         d = float("inf")
         for rc in combinations(red_words, i):
@@ -39,13 +55,18 @@ def produce_clue(red_words, bad_words, words, model):
                         if R[r_w][w] > dr:
                             dr = R[r_w][w]
                     if dr < d and dr < wd and dr < 1: # threshold [0;1] to determine the models aggressiveness (the higher the more aggressive)
-                        #print(rc, w, i, dr)
                         d = dr
                         best = w
                         Ci = i
     return best, Ci
 
+
 def google_words(model):
+    """
+    formats the clue options into a list
+    :param model: instance of the GloVe class
+    :return: list of possible clues from the Google dataset
+    """
     # words that the model can choose the clue from (10,000 most common english words)
     w = list()
     with open("google-10000-english.txt", encoding="utf-8") as f:
@@ -56,12 +77,11 @@ def google_words(model):
                 w.append(word)
     return w
 
+
 def main():
     model = GloVe_Model()
     red_words = ["tap", "leaf", "bermuda", "spider", "ram", "rope", "stadium", "bill"]
     bad_words = ["alaska", "cast", "dentist", "manicure", "stick", "wool", "racket", "iron", "comic", "bugle", "ranch", "block", "dress", "plate", "vampire", "poison", "van"]
-    #red_words = ["yard", "pew", "casino", "chip", "court", "australia", "minute", "blues", "brush"]
-    #bad_words = ["earth", "marathon", "row", "wave", "mexico", "toast", "heart", "whale", "table", "road", "bar", "suit", "lead", "paint", "computer", "pass"]
 
     board = red_words + bad_words
 
@@ -79,10 +99,10 @@ def main():
         board.remove(guess)
 
     # ranking guesses in annotated data
-    with open("data_MCDM.json", encoding="utf-8") as f:
+    with open("data/codenamesexp.json", encoding="utf-8") as f:
         data = json.load(f)
 
-    with open("baseline_ranking_data3.tsv", "w", encoding="utf-8") as g:
+    with open("results/baseline_ranking_ZiS.tsv", "w", encoding="utf-8") as g:
         first_line = "clue\thuman guess\tmodel guess\taverage rank of correct guesses\tmodel score\n"
         g.writelines(first_line)
 
@@ -121,7 +141,7 @@ def main():
                 score = i
 
                 # write down
-                with open("baseline_ranking_data3.tsv", "a", encoding="utf-8") as g:
+                with open("results/baseline_ranking_ZiS.tsv", "a", encoding="utf-8") as g:
                     line = str(clue) + "\t" + str(gold_guesses) + "\t" + str(rank) + "\t" + str(avg_rank) + "\t" + str(score) + "\n"
                     g.writelines(line)
 
