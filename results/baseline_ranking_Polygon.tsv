@@ -1,0 +1,16 @@
+clue	human guess	model guess	average rank of correct guesses	model score
+['eye', 2]	['glass', 'cat']	['blind', 'back', 'patient', 'cat', 'glass', 'chest', 'crown', 'memory', 'vet', 'forest', 'swing', 'chair', 'iron', 'vampire', 'farm', 'leather', 'scientist', 'balloon', 'soldier', 'mile', 'desk', 'mug', 'saloon', 'cuckoo', 'icecream']	3.5	0
+['stake', 2]	['vampire', 'iron']	['crown', 'back', 'farm', 'iron', 'chair', 'mile', 'swing', 'blind', 'forest', 'soldier', 'vampire', 'patient', 'desk', 'memory', 'chest', 'saloon', 'leather', 'balloon', 'scientist', 'vet', 'mug', 'cuckoo', 'icecream']	6.5	0
+['door', 2]	['back']	['back', 'desk', 'blind', 'chair', 'saloon', 'swing', 'chest', 'leather', 'crown', 'mile', 'forest', 'farm', 'mug', 'memory', 'patient', 'soldier', 'balloon', 'cuckoo', 'vet', 'scientist', 'icecream']	0	1
+['wicker', 2]	['chest', 'chair']	['chair', 'leather', 'desk', 'swing', 'mug', 'chest', 'crown', 'forest', 'farm', 'balloon', 'memory', 'cuckoo', 'saloon', 'soldier', 'mile', 'patient', 'scientist', 'vet', 'icecream']	2.5	1
+['chicken', 2]	['farm', 'cuckoo']	['farm', 'mug', 'icecream', 'mile', 'swing', 'vet', 'crown', 'forest', 'leather', 'soldier', 'cuckoo', 'saloon', 'balloon', 'memory', 'patient', 'scientist', 'desk']	5	1
+['cow', 2]	['leather', 'icecream']	['leather', 'mug', 'forest', 'vet', 'balloon', 'soldier', 'swing', 'mile', 'desk', 'crown', 'scientist', 'icecream', 'patient', 'memory']	5.5	1
+['memorial', 2]	['soldier', 'memory']	['mile', 'soldier', 'memory', 'forest', 'crown', 'patient', 'vet', 'balloon', 'mug', 'scientist', 'desk', 'swing']	1.5	0
+['furniture', 1]	['desk']	['desk', 'crown', 'mug', 'patient', 'mile', 'vet', 'scientist']	0	1
+['camera', 2]	['record', 'battery']	['battery', 'step', 'record', 'love', 'leather', 'slip', 'bill', 'tail', 'contract', 'round', 'amazon', 'spray', 'patient', 'lap', 'alien', 'mile', 'paddle', 'racket', 'smell', 'nail', 'astronaut', 'bread', 'noah', 'spoon', 'pyramid']	1	1
+['perfume', 2]	['smell', 'spray']	['spray', 'smell', 'love', 'nail', 'leather', 'bread', 'round', 'pyramid', 'step', 'amazon', 'slip', 'spoon', 'bill', 'contract', 'alien', 'racket', 'mile', 'patient', 'tail', 'noah', 'astronaut', 'lap', 'paddle']	0.5	2
+['corgi', 3]	['tail', 'love', 'bread']	['love', 'tail', 'lap', 'contract', 'bill', 'noah', 'bread', 'nail', 'round', 'leather', 'astronaut', 'patient', 'slip', 'spoon', 'paddle', 'pyramid', 'racket']	2.3333333333333335	2
+['moo', 2]	['leather', 'noah']	['spoon', 'bill', 'slip', 'leather', 'nail', 'contract', 'paddle', 'round', 'astronaut', 'pyramid', 'noah', 'patient', 'racket']	6.5	0
+['clinical', 2]	['patient', 'contract']	['patient', 'contract', 'nail', 'round', 'bill', 'slip', 'astronaut', 'pyramid', 'spoon', 'paddle', 'racket']	0.5	2
+['party', 3]	['pool', 'beach']	['beach', 'tie', 'dream', 'miss', 'pool', 'ground', 'contract', 'track', 'horse', 'pole', 'salsa', 'crash', 'barbecue', 'alaska', 'patient', 'lab', 'cotton', 'sub', 'wheelchair', 'greenhouse', 'pentagon', 'earthquake', 'ant', 'squash', 'sloth']	2	1
+['growing', 2]	['greenhouse', 'squash']	['ground', 'greenhouse', 'patient', 'dream', 'track', 'squash', 'miss', 'horse', 'contract', 'cotton', 'lab', 'tie', 'pole', 'alaska', 'ant', 'salsa', 'crash', 'pentagon', 'earthquake', 'sub', 'barbecue', 'wheelchair', 'sloth']	3	0

@@ -1,0 +1,39 @@
+clue	human guess	model guess	average rank of correct guesses	model score
+['philosopher', 2]	['greece', 'teacher']	['scientist', 'teacher', 'point', 'greece', 'mine', 'chair', 'pass', 'chick', 'agent', 'angel', 'suit', 'log', 'nut', 'screen', 'pin', 'ambulance', 'nail', 'stadium']	2	0
+['crucifixion', 2]	['nail', 'angel']	['angel', 'nail', 'point', 'ambulance', 'mine', 'pin', 'suit', 'screen', 'log', 'chick', 'pass', 'chair', 'scientist', 'agent', 'nut', 'stadium']	0.5	2
+['cabin', 2]	['log', 'chair']	['log', 'chair', 'pass', 'point', 'screen', 'mine', 'suit', 'ambulance', 'stadium', 'pin', 'agent', 'nut', 'chick', 'scientist']	0.5	2
+['attorney', 2]	['suit']	['agent', 'suit', 'point', 'pass', 'scientist', 'mine', 'ambulance', 'stadium', 'chick', 'screen', 'pin', 'nut']	1	0
+['shaft', 2]	['mine', 'pin']	['nut', 'pin', 'point', 'mine', 'screen', 'chick', 'pass', 'agent', 'stadium', 'ambulance', 'scientist']	2	0
+['300', 2]	['screen']	['point', 'screen', 'pass', 'stadium', 'agent', 'ambulance', 'nut', 'chick']	1	0
+['feathers', 1]	['chick']	['chick', 'point', 'pass', 'nut', 'stadium', 'ambulance', 'agent']	0	1
+['disappear', 3]	['bermuda', 'triangle', 'sink']	['change', 'sink', 'crash', 'tag', 'foot', 'chest', 'tap', 'forest', 'table', 'millionaire', 'grass', 'board', 'china', 'canada', 'spring', 'row', 'pie', 'triangle', 'fan', 'beach', 'bermuda', 'nurse', 'whip', 'eagle', 'mercury']	12.666666666666666	0
+['morgue', 3]	['tag', 'foot']	['nurse', 'chest', 'board', 'table', 'crash', 'foot', 'row', 'fan', 'millionaire', 'canada', 'pie', 'beach', 'forest', 'mercury', 'spring', 'change', 'tap', 'grass', 'tag', 'eagle', 'china', 'whip']	11.5	0
+['lash', 2]	['whip', 'crash']	['whip', 'chest', 'spring', 'change', 'row', 'crash', 'fan', 'millionaire', 'grass', 'canada', 'board', 'china', 'nurse', 'pie', 'forest', 'tap', 'beach', 'table', 'eagle', 'mercury']	2.5	1
+['tan', 3]	['beach', 'chest']	['beach', 'chest', 'grass', 'china', 'spring', 'fan', 'row', 'forest', 'pie', 'eagle', 'table', 'change', 'board', 'canada', 'tap', 'nurse', 'millionaire', 'mercury']	0.5	2
+['ambient', 2]	['board', 'canada']	['change', 'fan', 'tap', 'table', 'mercury', 'forest', 'spring', 'board', 'canada', 'china', 'grass', 'row', 'pie', 'eagle', 'nurse', 'millionaire']	7.5	0
+['picnic', 3]	['table', 'spring', 'grass']	['table', 'spring', 'grass', 'pie', 'forest', 'row', 'eagle', 'fan', 'china', 'tap', 'change', 'nurse', 'mercury', 'millionaire']	1	3
+['bird', 1]	['eagle']	['eagle', 'forest', 'fan', 'china', 'pie', 'change', 'nurse', 'row', 'tap', 'mercury', 'millionaire']	0	1
+['elevator', 3]	['skyscraper', 'button']	['washer', 'pit', 'shoe', 'well', 'ship', 'button', 'skyscraper', 'pyramid', 'thumb', 'plot', 'lap', 'cross', 'server', 'figure', 'alien', 'straw', 'compound', 'apple', 'maple', 'alps', 'unicorn', 'mint', 'jupiter', 'olympus', 'lemon']	5.5	0
+['hole', 2]	['pit', 'well']	['thumb', 'pit', 'well', 'cross', 'lap', 'figure', 'shoe', 'washer', 'ship', 'alien', 'apple', 'jupiter', 'straw', 'compound', 'plot', 'pyramid', 'maple', 'mint', 'server', 'lemon', 'unicorn', 'alps', 'olympus']	1.5	0
+['crisp', 3]	['alps']	['lemon', 'mint', 'apple', 'maple', 'straw', 'shoe', 'plot', 'thumb', 'cross', 'figure', 'lap', 'alps', 'ship', 'server', 'washer', 'compound', 'pyramid', 'unicorn', 'jupiter', 'olympus', 'alien']	11	0
+['horse', 2]	['shoe', 'unicorn']	['cross', 'unicorn', 'shoe', 'figure', 'straw', 'lap', 'ship', 'thumb', 'mint', 'apple', 'plot', 'compound', 'maple', 'alien', 'lemon', 'pyramid', 'jupiter', 'olympus', 'server', 'washer']	1.5	0
+['dot', 2]	['cross']	['cross', 'apple', 'figure', 'server', 'lemon', 'thumb', 'mint', 'compound', 'maple', 'straw', 'ship', 'lap', 'alien', 'plot', 'pyramid', 'washer', 'jupiter', 'olympus']	0	1
+['triangle', 1]	['pyramid']	['pyramid', 'plot', 'figure', 'thumb', 'jupiter', 'maple', 'compound', 'lemon', 'lap', 'alien', 'ship', 'straw', 'mint', 'server', 'olympus', 'washer']	0	1
+['skating', 2]	['figure']	['figure', 'maple', 'lap', 'mint', 'compound', 'ship', 'thumb', 'plot', 'jupiter', 'alien', 'server', 'lemon', 'straw', 'washer', 'olympus']	0	1
+['oceans', 2]	['ship']	['jupiter', 'ship', 'alien', 'plot', 'lap', 'olympus', 'maple', 'straw', 'compound', 'mint', 'server', 'washer', 'thumb']	1	0
+['sip', 1]	['straw']	['server', 'straw', 'thumb', 'maple', 'washer', 'compound', 'olympus', 'plot', 'alien']	1	0
+['light', 3]	['switch', 'laser']	['life', 'laser', 'switch', 'key', 'bell', 'pole', 'fly', 'film', 'school', 'game', 'park', 'seal', 'bug', 'hollywood', 'spy', 'pupil', 'opera', 'dice', 'shark', 'worm', 'aztec', 'mole', 'ninja', 'slug', 'antarctica']	1.5	0
+['squares', 2]	['dice']	['dice', 'key', 'game', 'aztec', 'park', 'life', 'mole', 'pole', 'ninja', 'seal', 'bell', 'fly', 'school', 'hollywood', 'bug', 'pupil', 'film', 'opera', 'slug', 'worm', 'shark', 'spy', 'antarctica']	0	1
+['punch', 2]	['slug', 'ninja']	['fly', 'pole', 'key', 'ninja', 'game', 'bell', 'slug', 'life', 'film', 'shark', 'worm', 'seal', 'hollywood', 'bug', 'school', 'park', 'spy', 'pupil', 'aztec', 'mole', 'opera', 'antarctica']	4.5	0
+['swat', 2]	['fly']	['fly', 'school', 'key', 'shark', 'seal', 'life', 'park', 'film', 'bell', 'aztec', 'worm', 'pole', 'opera', 'pupil', 'antarctica']	0	1
+['principal', 3]	['school', 'bell']	['school', 'key', 'pupil', 'life', 'bell', 'opera', 'park', 'film', 'pole', 'seal', 'shark', 'aztec', 'worm', 'antarctica']	2	1
+['gold', 2]	['aztec', 'seal']	['key', 'life', 'bell', 'seal', 'school', 'film', 'aztec', 'pole', 'shark', 'park', 'opera', 'worm', 'pupil', 'antarctica']	4.5	0
+['suitcase', 2]	['trunk', 'hotel']	['trunk', 'drop', 'piano', 'bow', 'jam', 'jet', 'hotel', 'part', 'glass', 'ring', 'mammoth', 'hospital', 'concert', 'band', 'mexico', 'satellite', 'bill', 'palm', 'kiwi', 'staff', 'post', 'drill', 'cycle', 'oil', 'czech']	3	1
+['texas', 6]	['oil', 'drill', 'mexico']	['mexico', 'bill', 'part', 'hospital', 'post', 'band', 'palm', 'oil', 'staff', 'satellite', 'drop', 'ring', 'mammoth', 'concert', 'bow', 'piano', 'glass', 'drill', 'jet', 'jam', 'cycle', 'czech', 'kiwi']	8	1
+['thermometer', 2]	['hospital', 'glass']	['glass', 'satellite', 'drop', 'ring', 'cycle', 'part', 'hospital', 'palm', 'piano', 'bow', 'post', 'band', 'jet', 'concert', 'bill', 'mammoth', 'staff', 'jam', 'czech', 'kiwi']	3	1
+['texas', 2]	['band', 'concert']	['bill', 'part', 'post', 'band', 'palm', 'staff', 'satellite', 'drop', 'ring', 'mammoth', 'concert', 'bow', 'piano', 'jet', 'jam', 'cycle', 'czech', 'kiwi']	6.5	0
+['monthly', 2]	['cycle', 'bill']	['drop', 'cycle', 'staff', 'post', 'bill', 'part', 'satellite', 'palm', 'jam', 'czech', 'ring', 'piano', 'jet', 'mammoth', 'bow', 'kiwi']	2.5	0
+['zealand', 3]	['kiwi']	['kiwi', 'czech', 'part', 'post', 'staff', 'palm', 'drop', 'jet', 'mammoth', 'satellite', 'ring', 'jam', 'piano', 'bow']	0	1
+['republic', 1]	['czech']	['czech', 'part', 'post', 'staff', 'satellite', 'palm', 'drop', 'ring', 'mammoth', 'bow', 'jam', 'piano']	0	1
+['weapon', 2]	['bow']	['drop', 'bow', 'part', 'ring', 'staff', 'post', 'satellite', 'palm', 'piano', 'jam', 'mammoth']	1	0
+['music', 1]	['piano']	['piano', 'part', 'post', 'drop', 'staff', 'ring', 'palm', 'satellite', 'mammoth']	0	1
