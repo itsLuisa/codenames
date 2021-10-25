@@ -1,0 +1,19 @@
+original clue	best literal guess	best pragmatic guess	human guess	score	points
+('cosmetic', 2)	('dentist', 'manicure')	('dentist', 'manicure')	['manicure', 'stick']	0	1
+('sport', 2)	('stadium', 'dress')	('stadium', 'racket')	['stadium', 'racket']	2	2
+('anesthesia', 2)	('dentist', 'poison')	('dentist', 'poison')	['dentist', 'cast']	1	1
+('nature', 2)	('leaf', 'bill')	('leaf', 'poison')	['leaf', 'spider']	1	1
+('housing', 2)	('plate', 'block')	('plate', 'block')	['block', 'ranch']	0	1
+('garden', 3)	('yard', 'table', 'road')	('yard', 'table', 'road')	['yard', 'pew', 'earth']	1	1
+('endurance', 3)	('marathon', 'heart', 'minute')	('marathon', 'heart', 'road')	['marathon', 'row', 'wave']	1	1
+('gambling', 2)	('casino', 'table')	('casino', 'table')	['casino', 'chip']	1	1
+('kangaroo', 1)	('australia',)	('australia',)	['australia']	1	1
+('mammal', 1)	('whale',)	('whale',)	['whale']	1	1
+('hour', 1)	('minute',)	('minute',)	['minute']	1	1
+('tennis', 1)	('table',)	('table',)	['table']	1	1
+('war', 2)	('well', 'game')	('battleship', 'crusader')	['battleship', 'crusader']	2	2
+('ipad', 3)	('game', 'well', 'page')	('game', 'scroll', 'banana')	['scroll', 'game', 'kid']	2	2
+('australia', 1)	('well',)	('kangaroo',)	['kangaroo']	1	1
+('playground', 2)	('well', 'ice')	('ice', 'polo')	['polo', 'square']	0	1
+('water', 2)	('well', 'ice')	('well', 'ice')	['well', 'ice']	2	2
+('party', 2)	('saw', 'page')	('banana', 'rabbit')	['waitress', 'ambulance']	0	0
