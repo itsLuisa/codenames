@@ -1,0 +1,137 @@
+{
+  "game 1": {
+    "color distribution": {"saloon": "blue", "swing": "blue", "scientist": "white", "balloon": "red", "mug": "white", "iron": "red", "patient": "red", "vet": "black", "desk": "blue", "back": "white", "mile": "white", "glass": "blue", "crown": "white", "blind": "blue", "forest": "white", "chest": "red", "chair": "red", "icecream": "red", "memory": "blue", "farm": "blue", "vampire": "red", "leather": "red", "soldier": "blue", "cat": "white", "cuckoo": "blue"},
+    "round 1": {
+      "team": "blue",
+      "remaining words": ["saloon", "swing", "scientist", "balloon", "mug", "iron", "patient", "vet", "desk", "back", "mile", "glass", "crown", "blind", "forest", "chest", "chair", "icecream", "memory", "farm", "vampire", "leather", "soldier", "cat", "cuckoo"],
+      "clue": ["eye", 2],
+      "guesses": ["glass", "cat", "blind"],
+      "wrong guesses": ["cat"]
+    },
+    "round 2": {
+      "team": "red",
+      "remaining words": ["saloon", "swing", "scientist", "balloon", "mug", "iron", "patient", "vet", "desk", "back", "mile", "crown", "blind", "forest", "chest", "chair", "icecream", "memory", "farm", "vampire", "leather", "soldier", "cuckoo"],
+      "clue": ["stake", 2],
+      "guesses": ["vampire", "iron"],
+      "wrong guesses": []
+    },
+    "round 3": {
+      "team": "blue",
+      "remaining words": ["saloon", "swing", "scientist", "balloon", "mug", "patient", "vet", "desk", "back", "mile", "crown", "blind", "forest", "chest", "chair", "icecream", "memory", "farm", "leather", "soldier", "cuckoo"],
+      "clue": ["door", 2],
+      "guesses": ["back", "saloon", "swing"],
+      "wrong guesses": ["back"]
+    },
+    "round 4": {
+      "team": "red",
+      "remaining words": ["saloon", "swing", "scientist", "balloon", "mug", "patient", "vet", "desk", "mile", "crown", "forest", "chest", "chair", "icecream", "memory", "farm", "leather", "soldier", "cuckoo"],
+      "clue": ["wicker", 2],
+      "guesses": ["chest", "chair"],
+      "wrong guesses": []
+    },
+    "round 5": {
+      "team": "blue",
+      "remaining words": ["saloon", "swing", "scientist", "balloon", "mug", "patient", "vet", "desk", "mile", "crown", "forest", "icecream", "memory", "farm", "leather", "soldier", "cuckoo"],
+      "clue": ["chicken", 2],
+      "guesses": ["farm", "cuckoo"],
+      "wrong guesses": []
+    },
+    "round 6": {
+      "team": "red",
+      "remaining words": ["swing", "scientist", "balloon", "mug", "patient", "vet", "desk", "mile", "crown", "forest", "icecream", "memory", "leather", "soldier"],
+      "clue": ["cow", 2],
+      "guesses": ["leather", "icecream"],
+      "wrong guesses": []
+    },
+    "round 7": {
+      "team": "blue",
+      "remaining words": ["swing", "scientist", "balloon", "mug", "patient", "vet", "desk", "mile", "crown", "forest", "memory", "soldier"],
+      "clue": ["memorial", 2],
+      "guesses": ["soldier", "memory"],
+      "wrong guesses": []
+    },
+    "round 8": {
+      "team": "red",
+      "remaining words": ["scientist", "balloon", "mug", "patient", "vet", "desk", "mile", "crown", "forest"],
+      "clue": ["decompress", 2],
+      "guesses": ["balloon", "forest"],
+      "wrong guesses": ["forest"]
+    },
+    "round 9": {
+      "team": "blue",
+      "remaining words": ["scientist", "mug", "patient", "vet", "desk", "mile", "crown"],
+      "clue": ["furniture", 1],
+      "guesses": ["desk"],
+      "wrong guesses": []
+    }
+  },
+  "game 2": {
+    "color distribution": {"round": "red", "smell": "blue", "spray": "blue", "slip": "black", "racket": "blue", "tail": "red", "step": "red", "pyramid": "white", "contract": "red", "bill": "white", "lap": "red", "amazon": "blue", "battery": "red", "spoon": "blue", "noah": "blue", "patient": "red", "bread": "white", "nail": "white", "mile": "white", "paddle": "white", "record": "red", "love": "red", "alien": "blue", "leather": "blue", "astronaut": "white"},
+    "round 1": {
+      "team": "red",
+      "remaining words": ["round", "smell", "spray", "slip", "racket", "tail", "step", "pyramid", "contract", "bill", "lap", "amazon", "battery", "spoon", "noah", "patient", "bread", "nail", "mile", "paddle", "record", "love", "alien", "leather", "astronaut"],
+      "clue": ["camera", 2],
+      "guesses": ["record", "battery"],
+      "wrong guesses": []
+    },
+    "round 2": {
+      "team": "blue",
+      "remaining words": ["round", "smell", "spray", "slip", "racket", "tail", "step", "pyramid", "contract", "bill", "lap", "amazon", "spoon", "noah", "patient", "bread", "nail", "mile", "paddle", "love", "alien", "leather", "astronaut"],
+      "clue": ["perfume", 2],
+      "guesses": ["smell", "spray"],
+      "wrong guesses": []
+    },
+    "round 3": {
+      "team": "red",
+      "remaining words": ["round", "slip", "racket", "tail", "step", "pyramid", "contract", "bill", "lap", "amazon", "spoon", "noah", "patient", "bread", "nail", "mile", "paddle", "love", "alien", "leather", "astronaut"],
+      "clue": ["racewalking", 2],
+      "guesses": ["step", "mile", "lap"],
+      "wrong guesses": ["mile"]
+    },
+    "round 4": {
+      "team": "blue",
+      "remaining words": ["round", "slip", "racket", "tail", "pyramid", "contract", "bill", "lap", "amazon", "spoon", "noah", "patient", "bread", "nail", "paddle", "love", "alien", "leather", "astronaut"],
+      "clue": ["nonhuman", 2],
+      "guesses": ["alien", "amazon"],
+      "wrong guesses": []
+    },
+    "round 5": {
+      "team": "red",
+      "remaining words": ["round", "slip", "racket", "tail", "pyramid", "contract", "bill", "lap", "spoon", "noah", "patient", "bread", "nail", "paddle", "love", "leather", "astronaut"],
+      "clue": ["corgi", 3],
+      "guesses": ["tail", "love", "bread", "round"],
+      "wrong guesses": ["bread"]
+    },
+    "round 6": {
+      "team": "blue",
+      "remaining words": ["round", "slip", "racket", "pyramid", "contract", "bill", "spoon", "noah", "patient", "nail", "paddle", "leather", "astronaut"],
+      "clue": ["moo", 2],
+      "guesses": ["leather", "noah"],
+      "wrong guesses": []
+    },
+    "round 7": {
+      "team": "red",
+      "remaining words": ["round", "slip", "racket", "pyramid", "contract", "bill", "spoon", "patient", "nail", "paddle", "astronaut"],
+      "clue": ["clinical", 2],
+      "guesses": ["patient", "contract"],
+      "wrong guesses": []
+    }
+  },
+  "game 3": {
+    "color distribution": {"sloth": "white", "contract": "contract", "barbecue": "blue", "pentagon": "blue", "miss": "white", "pole": "red", "squash": "black", "crash": "blue", "greenhouse": "red", "earthquake": "red", "track": "white", "pool": "blue", "alaska": "blue", "cotton": "red", "tie": "red", "ant": "red", "sub": "white", "beach": "white", "dream": "blue", "salsa": "blue", "patient": "blue", "ground": "white", "wheelchair": "red", "horse": "white", "lab": "blue"},
+    "round 1": {
+      "team": "blue",
+      "remaining words": ["sloth", "contract", "barbecue", "pentagon", "miss", "pole", "squash", "crash", "greenhouse", "earthquake", "track", "pool", "alaska", "cotton", "tie", "ant", "sub", "beach", "dream", "salsa", "patient", "ground", "wheelchair", "horse", "lab"],
+      "clue": ["party", 3],
+      "guesses": ["pool", "beach"],
+      "wrong guesses": ["beach"]
+    },
+    "round 2": {
+      "team": "red",
+      "remaining words": ["sloth", "contract", "barbecue", "pentagon", "miss", "pole", "squash", "crash", "greenhouse", "earthquake", "track", "alaska", "cotton", "tie", "ant", "sub", "dream", "salsa", "patient", "ground", "wheelchair", "horse", "lab"],
+      "clue": ["growing", 2],
+      "guesses": ["greenhouse", "squash"],
+      "wrong guesses": ["squash"]
+    }
+  }
+}
