@@ -3,16 +3,19 @@ import numpy as np
 from statistics import mean
 
 
-def create_meaning_matrix(all_clues, just_combos, model):
+def create_meaning_matrix(all_clues, just_combos, model, mean_or_prod="mean"):
     """creates meaning matrix with: rows = clues & columns = guess combos"""
     meaning_matrix = list()
     for (c, i) in all_clues:
         arr = list()
         for jc in just_combos:
-            m = mean([model.distance(w, c) for w in jc])
+            if mean_or_prod == "mean":
+                m = mean([model.distance(w, c) for w in jc])
+            else:
+                m = np.prod([(model.distance(w, c) + 1) / 2 for w in jc]) # + 1 / 2 is for normalizing the cosine [-1;1] to [0;1], should not make any difference
             arr.append(m)
         arr = np.array(arr)
-        print(c, arr)
+        #print(c, arr)
         meaning_matrix.append(arr)
     meaning_matrix = np.array(meaning_matrix)
     print("meaning matrix:\n", meaning_matrix)

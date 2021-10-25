@@ -1,6 +1,6 @@
 import json
 from semantic_models import GloVe_Model
-from baseline_model import make_guess, produce_clue, google_words
+from baseline_model import make_guess, produce_clue
 from statistics import mean
 from itertools import combinations
 from RSA import create_meaning_matrix, RSA
@@ -8,12 +8,10 @@ from RSA import create_meaning_matrix, RSA
 
 def extract_example():
     """extracts example turn chosen by hand for tryouts"""
-    with open("codenamesexp.json", encoding="utf-8") as f:
+    with open("data/data_Polygon.json", encoding="utf-8") as f:
         data = json.load(f)
-        #clue = data["game 3"]["round 1"]["clue"]
-        clue = data["game 1"]["round 2"]["clue"]
-        #clue = ["water", 3]
-        gold_guesses = data["game 1"]["round 2"]["guesses"]
+        clue = data["game 1"]["round 3"]["clue"]
+        gold_guesses = data["game 1"]["round 3"]["guesses"]
         remaining_words = data["game 1"]["round 2"]["remaining words"]
     return clue, gold_guesses, remaining_words
 
@@ -47,7 +45,7 @@ def find_alternative_clues(google_words_list, model, short_combos, remaining_wor
         alternative_clues.append(new_clue)
     return alternative_clues
 
-
+'''
 def find_alt_clues_vector(model, short_combos, remaining_words, alt_clues):
     """find alternative clues in a, vector-based way insp. by Somers"""
     alternative_clues = list()
@@ -64,24 +62,24 @@ def find_alt_clues_vector(model, short_combos, remaining_words, alt_clues):
         print("alternative clue:", new_clue)
         alternative_clues.append(new_clue)
     return alternative_clues
+'''
 
 
-def rsa_based_guess(clue, gold_guesses, remaining_words, alt_clues, model, mode=1):
+def rsa_based_guess_alt_clues(clue, gold_guesses, remaining_words, alt_clues, model, dataset="google", mean_or_prod="mean"):
     sorted_combos = get_word_combos(model, clue, remaining_words)
     print(len(sorted_combos), sorted_combos)
 
     # shorten the combo list
     short_combos = sorted_combos[:200]
     print(len(short_combos), short_combos)
-
-    if mode == 1:
-        print("kim et al")
-        google_words_list = google_words(model)
-        alternative_clues = find_alternative_clues(google_words_list, model, short_combos, remaining_words, alt_clues)
-
+    if dataset == "google":
+        alternative_clues = find_alternative_clues(model.google_words, model, short_combos, remaining_words, alt_clues)
     else:
-        print("somers")
-        alternative_clues = find_alt_clues_vector(model, short_combos, remaining_words, alt_clues)
+        alternative_clues = find_alternative_clues(list(model.embeddings.keys()), model, short_combos, remaining_words, alt_clues)
+
+    #else:
+     #   print("somers")
+      #  alternative_clues = find_alt_clues_vector(model, short_combos, remaining_words, alt_clues)
     print(alternative_clues)
 
     # assemble clue combos
@@ -91,7 +89,28 @@ def rsa_based_guess(clue, gold_guesses, remaining_words, alt_clues, model, mode=
     just_combos = [a for a, b in short_combos]
     print(just_combos)
 
-    meaning_matrix = create_meaning_matrix(all_clues, just_combos, model)
+    meaning_matrix = create_meaning_matrix(all_clues, just_combos, model, mean_or_prod)
+    best_prag_guess = RSA(meaning_matrix, just_combos)
+    print("original clue:", all_clues[0])
+    print("best literal guess:", just_combos[0])
+    print("best pragmatic guess:", best_prag_guess)
+    print("human guess:", gold_guesses)
+    original_clue = all_clues[0]
+    best_lit_guess = just_combos[0]
+    human_guess = gold_guesses
+    return original_clue, best_lit_guess, best_prag_guess, human_guess
+
+
+def rsa_based_guess_full_dataset(clue, gold_guesses, remaining_words, model, dataset="google", mean_or_prod="mean"):
+    sorted_combos = get_word_combos(model, clue, remaining_words)
+    short_combos = sorted_combos[:200]
+    if dataset == "google":
+        alternative_clues = [(i, 1) for i in model.google_words if i != clue[0]]
+    else:
+        alternative_clues = [(i, 1) for i in model.embeddings.keys() if i != clue[0]]
+    all_clues = [tuple(clue)] + alternative_clues  # list of tuples
+    just_combos = [a for a, b in short_combos]
+    meaning_matrix = create_meaning_matrix(all_clues, just_combos, model, mean_or_prod)
     best_prag_guess = RSA(meaning_matrix, just_combos)
     print("original clue:", all_clues[0])
     print("best literal guess:", just_combos[0])
@@ -107,7 +126,8 @@ def main():
     clue, gold_guesses, remaining_words = extract_example()
     alt_clues = dict()
     model = GloVe_Model()
-    rsa_based_guess(clue, gold_guesses, remaining_words, alt_clues, model)
+    #rsa_based_guess_alt_clues(clue, gold_guesses, remaining_words, alt_clues, model, "google", "mean")
+    rsa_based_guess_full_dataset(clue, gold_guesses, remaining_words, model, "google", "mean")
 
 
 if __name__ == "__main__":

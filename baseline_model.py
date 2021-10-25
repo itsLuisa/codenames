@@ -61,49 +61,14 @@ def produce_clue(red_words, bad_words, words, model):
     return best, Ci
 
 
-def google_words(model):
-    """
-    formats the clue options into a list
-    :param model: instance of the GloVe class
-    :return: list of possible clues from the Google dataset
-    """
-    # words that the model can choose the clue from (10,000 most common english words)
-    w = list()
-    with open("google-10000-english.txt", encoding="utf-8") as f:
-        for line in f:
-            line = line.split()
-            word = line[0]
-            if word in model.embeddings:
-                w.append(word)
-    return w
-
-
-def main():
+def eval_baseline(input_data, output_data):
     model = GloVe_Model()
-    red_words = ["tap", "leaf", "bermuda", "spider", "ram", "rope", "stadium", "bill"]
-    bad_words = ["alaska", "cast", "dentist", "manicure", "stick", "wool", "racket", "iron", "comic", "bugle", "ranch", "block", "dress", "plate", "vampire", "poison", "van"]
 
-    board = red_words + bad_words
-
-    # simulating one round of the game
-
-    # producing cue
-    clue = produce_clue(red_words, bad_words, google_words(model), model)
-    print("--- GloVe gives the following clue:", clue, "---")
-
-    # guessing based on clue
-    print("--- GloVe makes the following guess(es): ---")
-    for i in range(clue[1]):
-        guess = make_guess(clue[0], board, model)
-        print(guess)
-        board.remove(guess)
-
-    # ranking guesses in annotated data
-    with open("data/codenamesexp.json", encoding="utf-8") as f:
+    with open(input_data, encoding="utf-8") as f:
         data = json.load(f)
 
-    with open("results/baseline_ranking_ZiS.tsv", "w", encoding="utf-8") as g:
-        first_line = "clue\thuman guess\tmodel guess\taverage rank of correct guesses\tmodel score\n"
+    with open(output_data, "w", encoding="utf-8") as g:
+        first_line = "clue\thuman guess\tmodel guess\taverage rank of correct guesses\tmodel score\tpoints\n"
         g.writelines(first_line)
 
     for game in data:
@@ -140,10 +105,25 @@ def main():
                     flag = rank[i] in gold_guesses
                 score = i
 
+                # compute points
+                points = 0
+                for g in rank[:clue[1]]:
+                    if g in gold_guesses:
+                        points += 1
+
                 # write down
-                with open("results/baseline_ranking_ZiS.tsv", "a", encoding="utf-8") as g:
-                    line = str(clue) + "\t" + str(gold_guesses) + "\t" + str(rank) + "\t" + str(avg_rank) + "\t" + str(score) + "\n"
+                with open(output_data, "a", encoding="utf-8") as g:
+                    line = str(clue) + "\t" + str(gold_guesses) + "\t" + str(rank) + "\t" + str(avg_rank) + "\t" + str(score) + "\t" + str(points) +"\n"
                     g.writelines(line)
+
+
+def main():
+    #red_words = ["tap", "leaf", "bermuda", "spider", "ram", "rope", "stadium", "bill"]
+    #bad_words = ["alaska", "cast", "dentist", "manicure", "stick", "wool", "racket", "iron", "comic", "bugle", "ranch", "block", "dress", "plate", "vampire", "poison", "van"]
+
+    #board = red_words + bad_words
+
+    eval_baseline("data/eval_data_clean.json", "results/baseline_ranking_eval.tsv")
 
 
 if __name__ == "__main__":
