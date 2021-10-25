@@ -12,13 +12,20 @@ class GloVe_Model:
                 word = values[0]
                 vector = np.asarray(values[1:], "float32")
                 self.embeddings[word] = vector
+        self.google_words = list()
+        with open("google-10000-english.txt", encoding="utf-8") as f:
+            for line in f:
+                line = line.split()
+                word = line[0]
+                if word in self.embeddings:
+                    self.google_words.append(word)
 
     def distance(self, word, reference):
         """
         computes cosine distance between two words
         :param word: string of first word
         :param reference: string of second word
-        :return: float of cosine distance
+        :return: float of cosine distance within [0;2]
         """
         return spatial.distance.cosine(self.embeddings[word], self.embeddings[reference])
 
@@ -42,7 +49,7 @@ class GloVe_Model:
             d[word] = self.distance(clue, word)
         return sorted(d.items(), key=lambda x: x[1])
 
-    def goodness(self, word, answers, bad):
+    '''def goodness(self, word, answers, bad):
         if word in answers + bad: return -999
         return sum([self.distance(word, b) for b in bad]) - 4.0 * sum([self.distance(word, a) for a in answers])
 
@@ -62,7 +69,7 @@ class GloVe_Model:
         #res = [(str(i + 1), "{0:.2f}".format(self.minimax(w, answers, bad)), w) for i, w in enumerate(sorted(best[:250], key=lambda w: -1 * self.minimax(w, answers, bad))[:size])]
         res = [(w, self.minimax(w, answers, bad)) for w in sorted(best[:250], key=lambda w: -1 * self.minimax(w, answers, bad))[:size]]
         #return [(". ".join([c[0], c[2]]) + " (" + c[1] + ")") for c in res]
-        return res
+        return res'''
 
 
 def main():
@@ -71,7 +78,9 @@ def main():
     print(glove.closest_words("well")[:10])
     answers = ["manicure", "stick"]
     bad = ["alaska", "cast", "tap", "leaf", "bermuda", "dentist", "spider", "wool", "ram", "racket", "iron", "rope", "comic", "bugle", "ranch", "block", "dress", "stadium", "plate", "vampire", "poison", "van", "bill"]
-    print(glove.candidates(answers, bad))
+    #print(glove.candidates(answers, bad))
+    print(len(glove.embeddings))
+    #print(glove.embeddings.keys())
 
 
 if __name__ == "__main__":
