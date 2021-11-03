@@ -58,7 +58,7 @@ def make_guesses(method, dataset, input_data, output_data, mean_or_prod):
 
 
 def main():
-    make_guesses("whole_dataset", "google", "data/codenamesexp.json", "results/rsa_eval_ZiS_full_google_mean.tsv", "mean")
+    make_guesses("whole_dataset", "embs", "data/eval_data_clean.json", "results/rsa_eval_evaldata_full_emb_prod.tsv", "prod")
 
 
 if __name__ == "__main__":
