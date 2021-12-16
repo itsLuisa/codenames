@@ -1,0 +1,39 @@
+clue;clue_no;agreed_guesses;board_size;guesses;score;rank
+lake;2;['park', 'cliff'];23;['cliff', 'mouth'];1;1.0
+tiny;2;['microscope', 'fly'];14;['fly', 'ice'];1;4.5
+architecture;2;['bridge', 'church'];22;['church', 'field'];1;1.0
+fist;2;['palm', 'force'];10;['palm', 'boot'];1;0.5
+temple;1;['church'];14;['spell'];0;1.0
+music;2;['flute', 'cover'];17;['heart', 'flute'];1;7.0
+dog;2;['bark', 'tail'];19;['horse', 'tail'];1;2.0
+harbor;2;['ship', 'pearl'];16;['lock', 'france'];0;5.5
+christmas;3;['snow', 'forest', 'duck'];17;['moscow', 'snow', 'bomb'];1;2.666666666666667
+trade;2;['fair', 'shop'];13;['shop', 'pool'];1;2.5
+fairytale;4;['knight', 'shoe', 'ring', 'forest'];25;['lap', 'gas', 'ghost', 'cold'];0;15.25
+dance;2;['club', 'pole'];14;['date', 'club'];1;4.5
+sir;2;['england', 'knight'];16;['bay', 'knight'];1;7.5
+measure;2;['degree', 'triangle'];18;['degree', 'face'];1;6.5
+night;1;['day'];10;['day'];1;0.0
+coast;3;['cliff', 'seal', 'wind'];24;['cliff', 'fire', 'pyramid'];1;2.0
+drink;2;['water', 'well'];19;['water', 'flute'];1;2.0
+cow;2;['calf', 'bell'];18;['calf', 'water'];1;1.5
+spider;1;['web'];10;['field'];0;4.0
+rocky;3;['ground', 'fighter', 'train'];14;['ground', 'grass', 'snow'];1;6.0
+controller;2;['button', 'switch'];24;['doctor', 'board'];0;10.5
+summer;1;['spring'];19;['spring'];1;0.0
+juice;2;['apple', 'glass'];14;['glass', 'apple'];2;0.0
+swim;2;['wave', 'duck'];9;['wave', 'organ'];1;1.5
+sound;2;['pitch', 'bugle'];10;['play', 'pitch'];1;3.0
+wind;3;['fly', 'parachute', 'fall'];25;['water', 'fly', 'fall'];2;8.0
+access;2;['pass', 'code'];10;['code', 'pass'];2;0.0
+picnic;3;['table', 'spring', 'glass'];15;['web', 'row', 'thumb'];0;5.666666666666667
+miner;2;['copper', 'africa'];11;['copper', 'apple'];1;4.5
+dominion;3;['state', 'queen', 'knight'];25;['state', 'queen', 'lead'];2;1.6666666666666667
+statistic;2;['mass', 'battery'];25;['model', 'plot'];0;10.0
+football;2;['stadium', 'england'];22;['stadium', 'yard'];1;9.0
+tunnel;2;['tube', 'mine'];21;['tube', 'well'];1;1.0
+royal;2;['crown', 'queen'];23;['capital', 'queen'];1;1.0
+craft;3;['hand', 'knot', 'dress'];25;['field', 'hand', 'fish'];1;5.666666666666667
+wooden;2;['log', 'bank'];9;['log', 'bolt'];1;1.0
+dark;3;['shadow', 'hole', 'force'];22;['square', 'shadow', 'straw'];1;6.666666666666667
+business;2;['lawyer', 'center'];9;['face', 'center'];1;1.5

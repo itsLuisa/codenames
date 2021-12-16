@@ -1,0 +1,87 @@
+clue;clue_no;intended_words;board_size;guesses;score;rank
+hand;2;['thumb', 'glove'];19;['thumb', 'knife'];1;1.0
+cut;2;['knife', 'iron'];19;['change', 'knife'];1;2.5
+fist;3;['glove', 'iron', 'thumb'];19;['thumb', 'iron', 'knife'];2;0.3333333333333333
+catwoman;2;['thief', 'bat'];16;['thief', 'bat'];2;0.0
+robbery;2;['thief', 'bat'];16;['thief', 'train'];1;6.0
+heist;3;['scale', 'wall', 'thief'];16;['thief', 'train', 'club'];1;1.3333333333333333
+animal;2;['tail', 'mammoth'];9;['disease', 'tail'];1;2.0
+animal;2;['mammoth', 'tail'];9;['disease', 'tail'];1;2.0
+water;2;['pool', 'tap'];12;['well', 'pool'];1;1.5
+water;2;['pool', 'tap'];12;['well', 'pool'];1;1.5
+sound;2;['boom', 'tap'];12;['well', 'play'];0;2.0
+swatter;3;['beat', 'fly', 'paper'];14;['fly', 'glove', 'ball'];1;2.6666666666666665
+airplane;2;['paper', 'fly'];14;['fly', 'star'];1;2.0
+swat;3;['paper', 'fly', 'beat'];14;['fly', 'ball', 'beat'];2;3.0
+mechanic;2;['oil', 'drill'];19;['oil', 'drill'];2;0.0
+movie;2;['alien', 'theater'];18;['theater', 'king'];1;0.5
+hobby;2;['theater', 'cook'];18;['school', 'spot'];0;3.0
+geography;2;['berlin', 'turkey'];24;['mexico', 'point'];0;8.0
+clover;2;['green', 'luck'];25;['green', 'spring'];1;0.5
+nature;3;['fall', 'green', 'stick'];25;['fall', 'light', 'spring'];1;2.3333333333333335
+color;2;['green', 'orange'];12;['orange', 'green'];2;0.0
+colours;2;['green', 'orange'];12;['orange', 'green'];2;0.0
+build;2;['part', 'nail'];10;['part', 'lab'];1;2.5
+tail;2;['part', 'dog'];10;['dog', 'part'];2;0.0
+simpsons;2;['part', 'dog'];10;['duck', 'dog'];1;1.0
+toe;2;['dog', 'nail'];10;['nail', 'spike'];1;1.0
+trunks;2;['pool', 'comic'];10;['pool', 'cold'];1;1.5
+swim;1;['pool'];10;['pool'];1;0.0
+deadpool;2;['pool', 'comic'];10;['comic', 'witch'];1;2.5
+aquaman;2;['comic', 'pool'];10;['comic', 'pool'];2;0.0
+kitchen;4;['sink', 'olive', 'fork', 'orange'];22;['sink', 'bed', 'fan', 'school'];1;2.75
+jail;3;['sink', 'bed', 'orange'];22;['school', 'washington', 'orange'];1;6.0
+kitchen;2;['sink', 'fork'];22;['sink', 'bed'];1;2.5
+eat;3;['fork', 'orange', 'olive'];22;['pound', 'bed', 'rabbit'];0;5.666666666666667
+rhyme;2;['fan', 'pan'];23;['mine', 'moon'];0;11.5
+green;2;['bark', 'germany'];23;['orange', 'star'];0;17.0
+treaty;2;['germany', 'contract'];23;['contract', 'germany'];2;0.0
+siberia;3;['train', 'bear', 'moscow'];20;['moscow', 'train', 'bear'];3;0.0
+trip;4;['train', 'moscow', 'field', 'switch'];20;['day', 'train', 'drop', 'fair'];1;6.0
+backyard;2;['field', 'fence'];20;['fence', 'field'];2;0.0
+rails;2;['train', 'switch'];20;['train', 'fence'];1;1.0
+sea;2;['wave', 'net'];14;['oil', 'wave'];1;5.5
+fish;2;['wave', 'net'];14;['oil', 'plate'];0;6.0
+month;1;['march'];13;['march'];1;0.0
+spring;1;['march'];13;['march'];1;0.0
+composition;2;['cook', 'piano'];15;['piano', 'figure'];1;3.0
+music;2;['key', 'piano'];15;['piano', 'track'];1;1.5
+building;2;['stadium', 'school'];23;['school', 'key'];1;1.0
+football;3;['stadium', 'shoe', 'card'];23;['stadium', 'school', 'luck'];1;2.0
+article;2;['brush', 'post'];9;['post', 'cover'];1;3.0
+painting;1;['brush'];9;['brush'];1;0.0
+metal;3;['hook', 'copper', 'tube'];10;['copper', 'cover', 'tube'];2;0.6666666666666666
+water;1;['park'];10;['stream'];0;3.0
+keychain;2;['cell', 'link'];9;['hand', 'green'];0;3.5
+phone;2;['link', 'cell'];9;['cell', 'hand'];1;0.5
+ballet;2;['theater', 'moscow'];13;['theater', 'moscow'];2;0.0
+travel;2;['moscow', 'jet'];13;['jet', 'force'];1;1.0
+ice;2;['diamond', 'snow'];24;['snow', 'plastic'];1;3.0
+muscle;2;['heart', 'calf'];24;['heart', 'calf'];2;0.0
+nature;4;['calf', 'heart', 'snow', 'root'];24;['heart', 'figure', 'snow', 'march'];2;6.25
+toes;2;['nail', 'boot'];19;['nail', 'boot'];2;0.0
+games;2;['tag', 'yard'];19;['pool', 'shop'];0;4.0
+attraction;2;['bond', 'vacuum'];11;['bond', 'dog'];1;3.0
+friend;2;['bond', 'dog'];11;['dog', 'staff'];1;1.0
+leash;2;['dog', 'bond'];11;['dog', 'string'];1;2.0
+educated;2;['doctor', 'degree'];11;['degree', 'doctor'];2;0.0
+education;2;['degree', 'doctor'];11;['degree', 'change'];1;1.0
+phd;2;['degree', 'doctor'];11;['degree', 'doctor'];2;0.0
+pattern;3;['suit', 'marble', 'line'];13;['line', 'note', 'suit'];2;2.6666666666666665
+pinstripe;2;['suit', 'line'];13;['suit', 'marble'];1;0.5
+midas;2;['gold', 'king'];24;['king', 'gold'];2;0.0
+wealth;3;['gold', 'figure', 'king'];24;['gold', 'india', 'new'];1;2.0
+ship;5;['port', 'bridge', 'cotton', 'trip', 'figure'];24;['port', 'trip', 'mail', 'new', 'hand'];2;4.4
+cherry;2;['pit', 'jam'];17;['jam', 'glass'];1;2.0
+worker;3;['moscow', 'revolution', 'nurse'];17;['nurse', 'fire', 'lead'];1;5.333333333333333
+russia;2;['moscow', 'revolution'];17;['moscow', 'england'];1;0.5
+uniform;3;['fighter', 'hospital', 'sock'];17;['force', 'well', 'slip'];0;4.0
+gown;2;['slip', 'hospital'];17;['pearl', 'slip'];1;1.5
+leash;2;['lead', 'park'];10;['knot', 'lead'];1;2.0
+path;2;['lead', 'park'];10;['lead', 'log'];1;1.0
+construction;2;['drill', 'crane'];15;['crane', 'deck'];1;2.5
+dentist;2;['drill', 'staff'];15;['hospital', 'staff'];1;2.0
+bird;2;['head', 'tail'];15;['head', 'tail'];2;0.0
+penny;2;['head', 'tail'];15;['gold', 'head'];1;4.0
+interrogation;3;['thief', 'agent', 'chair'];20;['agent', 'head', 'code'];1;3.3333333333333335
+computer;4;['game', 'code', 'agent', 'chair'];20;['game', 'code', 'head', 'chair'];3;1.0
