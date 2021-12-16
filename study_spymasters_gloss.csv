@@ -1,0 +1,68 @@
+clue;clue_no;intended_words;board_size;guesses;score;rank
+hand;2;['thumb', 'glove'];19;['change', 'thumb'];1;8.5
+cut;2;['knife', 'iron'];19;['change', 'cast'];0;2.5
+fist;3;['glove', 'iron', 'thumb'];19;['change', 'thumb', 'air'];1;8.333333333333334
+robbery;2;['thief', 'bat'];16;['thief', 'club'];1;6.5
+heist;3;['scale', 'wall', 'thief'];16;['state', 'china', 'turkey'];0;7.333333333333333
+animal;2;['tail', 'mammoth'];9;['tail', 'disease'];1;3.5
+animal;2;['mammoth', 'tail'];9;['tail', 'disease'];1;3.5
+water;2;['pool', 'tap'];12;['bank', 'well'];0;2.5
+water;2;['pool', 'tap'];12;['bank', 'well'];0;2.5
+sound;2;['boom', 'tap'];12;['play', 'well'];0;2.0
+airplane;2;['paper', 'fly'];14;['fly', 'piano'];1;1.0
+mechanic;2;['oil', 'drill'];19;['dance', 'play'];0;8.0
+movie;2;['alien', 'theater'];18;['theater', 'spot'];1;3.0
+hobby;2;['theater', 'cook'];18;['school', 'model'];0;6.0
+nature;3;['fall', 'green', 'stick'];25;['light', 'spring', 'fall'];1;6.333333333333333
+color;2;['green', 'orange'];12;['green', 'orange'];2;0.0
+build;2;['part', 'nail'];10;['sink', 'nail'];1;1.5
+tail;2;['part', 'dog'];10;['dog', 'duck'];1;1.5
+toe;2;['dog', 'nail'];10;['nail', 'part'];1;1.0
+swim;1;['pool'];10;['pool'];1;0.0
+kitchen;4;['sink', 'olive', 'fork', 'orange'];22;['bed', 'sink', 'church', 'school'];1;7.0
+jail;3;['sink', 'bed', 'orange'];22;['church', 'fork', 'school'];0;6.666666666666667
+kitchen;2;['sink', 'fork'];22;['bed', 'sink'];1;2.0
+eat;3;['fork', 'orange', 'olive'];22;['sink', 'church', 'school'];0;12.666666666666666
+rhyme;2;['fan', 'pan'];23;['court', 'fan'];1;1.0
+green;2;['bark', 'germany'];23;['orange', 'straw'];0;15.0
+treaty;2;['germany', 'contract'];23;['contract', 'court'];1;10.5
+siberia;3;['train', 'bear', 'moscow'];20;['moscow', 'fence', 'fair'];1;4.666666666666667
+trip;4;['train', 'moscow', 'field', 'switch'];20;['drop', 'day', 'field', 'death'];1;5.25
+backyard;2;['field', 'fence'];20;['moscow', 'fence'];1;1.5
+sea;2;['wave', 'net'];14;['wave', 'net'];2;0.0
+fish;2;['wave', 'net'];14;['wave', 'mass'];1;0.5
+month;1;['march'];13;['spot'];0;2.0
+spring;1;['march'];13;['march'];1;0.0
+composition;2;['cook', 'piano'];15;['figure', 'cook'];1;4.5
+music;2;['key', 'piano'];15;['piano', 'america'];1;3.5
+building;2;['stadium', 'school'];23;['mass', 'duck'];0;8.5
+football;3;['stadium', 'shoe', 'card'];23;['stadium', 'school', 'card'];2;2.0
+article;2;['brush', 'post'];9;['cover', 'post'];1;1.0
+painting;1;['brush'];9;['cover'];0;3.0
+metal;3;['hook', 'copper', 'tube'];10;['copper', 'cover', 'tube'];2;1.0
+water;1;['park'];10;['stream'];0;4.0
+phone;2;['link', 'cell'];9;['link', 'hand'];1;3.0
+ballet;2;['theater', 'moscow'];13;['theater', 'stock'];1;5.0
+travel;2;['moscow', 'jet'];13;['force', 'poison'];0;7.0
+ice;2;['diamond', 'snow'];24;['snow', 'block'];1;7.5
+muscle;2;['heart', 'calf'];24;['heart', 'wall'];1;3.0
+nature;4;['calf', 'heart', 'snow', 'root'];24;['figure', 'heart', 'snow', 'wall'];2;4.0
+attraction;2;['bond', 'vacuum'];11;['bond', 'beat'];1;0.5
+friend;2;['bond', 'dog'];11;['vacuum', 'bond'];1;3.0
+leash;2;['dog', 'bond'];11;['dog', 'bond'];2;0.0
+educated;2;['doctor', 'degree'];11;['change', 'mass'];0;5.0
+education;2;['degree', 'doctor'];11;['mass', 'mail'];0;3.5
+pattern;3;['suit', 'marble', 'line'];13;['line', 'note', 'suit'];2;2.0
+wealth;3;['gold', 'figure', 'king'];24;['gold', 'figure', 'new'];2;3.0
+ship;5;['port', 'bridge', 'cotton', 'trip', 'figure'];24;['port', 'slip', 'new', 'gold', 'hand'];1;4.2
+worker;3;['moscow', 'revolution', 'nurse'];17;['nurse', 'fire', 'lead'];1;5.0
+russia;2;['moscow', 'revolution'];17;['england', 'moscow'];1;3.0
+uniform;3;['fighter', 'hospital', 'sock'];17;['well', 'card', 'force'];0;5.333333333333333
+gown;2;['slip', 'hospital'];17;['hospital', 'slip'];2;0.0
+leash;2;['lead', 'park'];10;['park', 'pistol'];1;0.5
+path;2;['lead', 'park'];10;['lead', 'park'];2;0.0
+construction;2;['drill', 'crane'];15;['scale', 'cover'];0;7.5
+dentist;2;['drill', 'staff'];15;['hospital', 'shadow'];0;4.5
+bird;2;['head', 'tail'];15;['tail', 'air'];1;2.0
+penny;2;['head', 'tail'];15;['jam', 'gold'];0;9.0
+computer;4;['game', 'code', 'agent', 'chair'];20;['code', 'needle', 'pipe', 'game'];2;2.5
