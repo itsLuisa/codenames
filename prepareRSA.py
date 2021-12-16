@@ -19,6 +19,7 @@ def extract_example():
 def get_word_combos(model, clue, remaining_words):
     """extracts word combinations and mean distance to clue and sort these combinations in descending order"""
     rank = model.get_hierarchy(clue[0], remaining_words)
+    #print(rank)
     rank = rank[:11]
     combos = dict()
     for c in combinations(rank, clue[1]):
@@ -103,6 +104,7 @@ def rsa_based_guess_alt_clues(clue, gold_guesses, remaining_words, alt_clues, mo
 
 def rsa_based_guess_full_dataset(clue, gold_guesses, remaining_words, model, dataset="google", mean_or_prod="mean"):
     sorted_combos = get_word_combos(model, clue, remaining_words)
+    print(sorted_combos)
     short_combos = sorted_combos[:200]
     if dataset == "google":
         alternative_clues = [(i, 1) for i in model.google_words if i != clue[0]]

@@ -2,7 +2,7 @@ from sklearn.preprocessing import normalize
 import numpy as np
 from statistics import mean
 
-
+# change everything to similarity
 def create_meaning_matrix(all_clues, just_combos, model, mean_or_prod="mean"):
     """creates meaning matrix with: rows = clues & columns = guess combos"""
     meaning_matrix = list()

@@ -31,7 +31,8 @@ def make_guesses(method, dataset, input_data, output_data, mean_or_prod):
                         unknown_word = True
                 if unknown_word:
                     continue
-
+                #distances = {word: model.distance(clue[0], word) for word in remaining_words}
+                #print(distances)
                 if method == "clue_finder":
                     original_clue, best_lit_guess, best_prag_guess, human_guess = rsa_based_guess_alt_clues(clue, gold_guesses, remaining_words, alt_clues, model, dataset, mean_or_prod)
                 else:
