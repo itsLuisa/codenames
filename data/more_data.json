@@ -1,0 +1,71 @@
+{
+  "game 1": {
+    "color distribution": {},
+    "round 1": {
+      "team": "red",
+      "remaining words": ["boot", "board", "pilot", "dog", "king", "lap", "washer", "horse", "turkey", "draft", "pound", "staff", "tooth", "rock", "dress", "mercury", "bond", "jack", "theater", "thumb", "film", "bow", "carrot", "stick", "spider"],
+      "clue": ["paper", 2],
+      "guesses": ["draft", "pound"],
+      "intended words": ["draft", "rock"]
+    },
+    "round 2": {
+      "team": "blue",
+      "remaining words": ["boot", "board", "pilot", "dog", "king", "lap", "washer", "horse", "turkey", "staff", "tooth", "rock", "dress", "mercury", "bond", "jack", "theater", "thumb", "film", "bow", "carrot", "stick", "spider"],
+      "clue": ["wooden", 2],
+      "guesses": ["stick"],
+      "intended words": ["stick", "board"]
+    },
+    "round 3": {
+      "team": "red",
+      "remaining words": ["boot", "board", "pilot", "dog", "king", "lap", "washer", "horse", "turkey", "staff", "tooth", "rock", "dress", "mercury", "bond", "jack", "theater", "thumb", "film", "bow", "carrot", "spider"],
+      "clue": ["toe", 2],
+      "guesses": ["boot", "thumb", "bond"],
+      "intended words": ["boot", "thumb"]
+    },
+    "round 4": {
+      "team": "blue",
+      "remaining words": ["board", "pilot", "dog", "king", "lap", "washer", "horse", "turkey", "staff", "tooth", "rock", "dress", "mercury", "jack", "theater", "film", "bow", "carrot", "spider"],
+      "clue": ["royal", 2],
+      "guesses": ["king"],
+      "intended words": ["king", "staff"]
+    },
+    "round 5": {
+      "team": "red",
+      "remaining words": ["board", "pilot", "dog", "lap", "washer", "horse", "turkey", "staff", "tooth", "rock", "dress", "mercury", "jack", "theater", "film", "bow", "carrot", "spider"],
+      "clue": ["meat", 2],
+      "guesses": ["turkey", "dog"],
+      "intended words": ["turkey", "horse"]
+    },
+    "round 6": {
+      "team": "blue",
+      "remaining words": ["board", "pilot", "lap", "washer", "horse", "staff", "tooth", "rock", "dress", "mercury", "jack", "theater", "film", "bow", "carrot", "spider"],
+      "clue": ["worker", 2],
+      "guesses": ["staff", "washer"],
+      "intended words": ["staff", "washer"]
+    },
+    "round 7": {
+      "team": "red",
+      "remaining words": ["board", "pilot", "lap", "horse", "tooth", "rock", "dress", "mercury", "jack", "theater", "film", "bow", "carrot", "spider"],
+      "clue": ["meteorite", 2],
+      "guesses": ["mercury", "rock", "tooth"],
+      "intended words": ["mercury", "rock"]
+    }
+  },
+  "game 2": {
+    "color distribution": {},
+    "round 1": {
+      "team": "red",
+      "remaining words": ["ghost", "cloak", "casino", "conductor", "pitch", "life", "game", "pirate", "mine", "ham", "sub", "marble", "play", "london", "ambulance", "roulette", "pan", "copper", "egypt", "antarctica", "button", "degree", "flute", "platypus", "angel"],
+      "clue": ["vegas", 2],
+      "guesses": ["casino", "play"],
+      "intended words": ["casino", "play"]
+    },
+    "round 2": {
+      "team": "blue",
+      "remaining words": ["ghost", "cloak", "conductor", "pitch", "life", "game", "pirate", "mine", "ham", "sub", "marble", "london", "ambulance", "roulette", "pan", "copper", "egypt", "antarctica", "button", "degree", "flute", "platypus", "angel"],
+      "clue": ["round", 2],
+      "guesses": ["marble", "button"],
+      "intended words": ["marble", "game"]
+    }
+  }
+}

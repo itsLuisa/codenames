@@ -1,0 +1,19 @@
+clue;clue_no;human_guesses;guesses;score;rank
+cosmetic;2;['manicure', 'stick'];['dentist', 'manicure'];1;1.0
+sport;2;['stadium', 'racket'];['stadium', 'dress'];1;0.5
+anesthesia;2;['dentist', 'cast'];['dentist', 'poison'];1;3.0
+nature;2;['leaf', 'spider'];['leaf', 'bill'];1;5.0
+housing;2;['block', 'ranch'];['plate', 'block'];1;1.5
+garden;3;['yard', 'pew', 'earth'];['yard', 'table', 'road'];1;7.666666666666667
+endurance;3;['marathon', 'row', 'wave'];['marathon', 'heart', 'minute'];1;7.0
+gambling;2;['casino', 'chip'];['casino', 'table'];1;1.5
+kangaroo;1;['australia'];['australia'];1;0.0
+mammal;1;['whale'];['whale'];1;0.0
+hour;1;['minute'];['minute'];1;0.0
+tennis;1;['table'];['table'];1;0.0
+war;2;['battleship', 'crusader'];['well', 'game'];0;5.5
+ipad;3;['scroll', 'game', 'kid'];['game', 'well', 'page'];1;1.3333333333333333
+australia;1;['kangaroo'];['well'];0;1.0
+playground;2;['polo', 'square'];['well', 'ice'];0;3.0
+water;2;['well', 'ice'];['well', 'ice'];2;0.0
+party;2;['waitress', 'ambulance'];['saw', 'page'];0;9.0

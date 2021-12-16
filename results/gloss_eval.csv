@@ -1,0 +1,7 @@
+clue;clue_no;human_guesses;bert_guesses;gloss_guesses;score_bert;score_gloss;rank_bert;rank_gloss
+philosopher;2;['greece', 'teacher', 'scientist'];['angel', 'nut'];['scientist', 'teacher'];0;2;21.5;8.5
+cabin;2;['log', 'chair'];['stadium', 'log'];['log', 'scientist'];1;1;3.5;3.5
+attorney;2;['suit'];['pass', 'agent'];['agent', 'scientist'];0;0;4.0;0.5
+shaft;2;['mine', 'pin'];['pass', 'pin'];['pass', 'point'];1;0;4.0;3.5
+weapon;2;['bow'];['bow', 'drop'];['drop', 'post'];1;0;-0.5;1.5
+music;1;['piano'];['drop'];['piano'];0;1;2.0;0.0

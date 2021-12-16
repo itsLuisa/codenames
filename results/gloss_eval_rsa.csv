@@ -1,0 +1,7 @@
+clue;clue_no;human_guesses;guesses;score;rank
+philosopher;2;['greece', 'teacher', 'scientist'];['scientist', 'teacher'];2;5.0
+cabin;2;['log', 'chair'];['log', 'chair'];2;0.0
+attorney;2;['suit'];['suit', 'agent'];1;0.0
+shaft;2;['mine', 'pin'];['pass', 'point'];0;3.0
+weapon;2;['bow'];['bow', 'ring'];1;0.0
+music;1;['piano'];['piano'];1;0.0
