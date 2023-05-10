@@ -208,9 +208,6 @@ def main():
             if word in model.embeddings:
                 possible_clues[word] = ps.stem(word)
 
-    print(possible_clues)
-    
-
     # start the game loop here
     while True:
         # create board
